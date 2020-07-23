@@ -14,3 +14,5 @@ This has been implemented on various machine learning algorithms and pre-process
 It has been found that the implementation of LSTM or DistilBERT with a combination of Logistic Regression have produced the better results compared to the others. A minimalistic UI has also been created and has been hosted on [Fake News Detector](http://3.23.59.214/). The hosting has been done on an AWS EC2 instance to make it public.
 
 All of this has been done with an amazing cross-functional team of 6 graduate students who have been co-ordinatinating by using [JIRA](https://sirishanookala.atlassian.net/jira/software/projects/FND) as a product management platform. 
+
+Note: The instance has been terminated because the free tier limit of AWS has been exceeded.
