@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+   
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="../static/assets/fakenews1.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          Fake News Detector
+        </a>
+      </nav>
+
+<!-- 
+        <form action="{{ url_for('predict')}}" method="POST">
+        <label>Title</label>
+        <input type="text" name="title"> <br/>
+        <label>Author</label>
+        <input type="text" name="author"> <br/>
+        <p>Enter Your Comment Here</p>
+        <textarea name="comment" rows="4" cols="50"></textarea>
+        <br/>
+
+        <input type="submit" class="btn-info" value="predict">
+        
+    </form> -->
+    <div >
+    <form action="{{ url_for('predict')}}" method="POST" style= "margin:40px auto;width:60%">
+        <div class="form-group" >
+          <label >Title</label>
+          <input type="text" class="form-control" name = "title">
+        </div>
+        <div class="form-group">
+          <label >Author</label>
+          <input type="text" class="form-control" name="author" >
+        </div>
+        <div class="form-group">
+            <label >Content</label>
+            <textarea class="form-control" value= "content" rows="3" name= "comment" id="content"></textarea>
+          </div>
+        <div style="display: flex; align-items: center; justify-content: center;">
+        <button type="submit" class="btn btn-success" value="predict" id = "predict" style="width:40%;margin-top: 30px;"  >Predict</button>
+        </div>
+      </form>
+        
+    </div>
+    <script src='http://code.jquery.com/jquery-1.7.1.min.js'></script>
+
+    <script>
+      $(document).ready(function(){
+    $('#predict').prop('disabled',true);
+    $('#content').keyup(function(){
+        $('#predict').prop('disabled', this.value == "" ? true : false);     
+    })
+});  
+    </script>
+    
+
+</body>
+</html>
