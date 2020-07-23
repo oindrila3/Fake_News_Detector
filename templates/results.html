@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+        <div id="brandname">
+            
+        </div>
+        <h2>Fake News Detector</h2>
+        
+    </div>
+    </header>
+    <p style="color:blue;font-size:20;text-align: center;"><b>Here's the result:</b></p>
+    <div class="results">
+            
+        {% if prediction == 1%}
+        <h2 style="color:blue;">Reliable Data!</h2>
+        {% elif prediction == 0%}
+        <h2 style="color:red;">It's Unreliable Data!</h2>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
